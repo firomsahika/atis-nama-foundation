@@ -30,8 +30,8 @@ export const NavBar = () => {
         fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out
         ${
           isScrolled
-            ? "py-2 backdrop-blur-xl bg-gradient-to-r from-teal-600/40 via-indigo-950/35 to-amber-950/25 border-b border-white/8 shadow-[0_6px_20px_-10px_rgba(0,0,0,0.2)]"
-            : "py-2 backdrop-blur-xl bg-gradient-to-r from-teal-600/40 via-indigo-950/35 to-amber-950/25 border-b border-white/8 shadow-[0_6px_20px_-10px_rgba(0,0,0,0.2)]"
+            ? "py-2 backdrop-blur-xl bg-gradient-to-r from-teal-600/40 via-indigo-950/35 to-blue-600/40 border-b border-white/8 shadow-[0_6px_20px_-10px_rgba(0,0,0,0.2)]"
+            : "py-2 backdrop-blur-xl bg-gradient-to-r from-teal-600/60 via-blue-800/35 to-blue-600/40 border-b border-white/8 shadow-[0_6px_20px_-10px_rgba(0,0,0,0.2)]"
         }
       `}
     >
