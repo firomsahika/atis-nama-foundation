@@ -113,7 +113,7 @@ export const HeroSlider: React.FC = () => {
 
               <div className="overflow-hidden mb-6">
                 <h1
-                  className={`text-4xl md:text-5xl lg:text-6xl font-headline text-white leading-[1.10] tracking-tight transition-all duration-1000 delay-500 drop-shadow-2xl ${
+                  className={`text-4xl md:text-5xl lg:text-6xl font-black font-bold font-headline text-white leading-[1.10] tracking-tight transition-all duration-1000 delay-500 drop-shadow-2xl ${
                     idx === current ? "translate-y-0" : "translate-y-full"
                   }`}
                 >
