@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const ProjectsCTA = () => {
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-teal-50/30 overflow-hidden">
+    <section className="relative py-24 lg:py-32 !bg-gradient-to-br from-teal-400/50 via-white to-teal-600/30 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute -left-40 top-20 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl" />
@@ -17,12 +17,12 @@ export const ProjectsCTA = () => {
           </span>
         </div>
 
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-8">
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-teal-800 via-indigo-800 to-amber-800 bg-clip-text text-transparent leading-tight tracking-tight mb-8">
           Every Gift Builds
           <br />a Better Tomorrow
         </h2>
 
-        <p className="text-xl md:text-2xl text-teal-100/90 max-w-3xl mx-auto leading-relaxed mb-12">
+        <p className="text-md md:text-xl text-black max-w-3xl mx-auto leading-light mb-12">
           Your support helps us build more safe homes for elders, feed orphaned
           children, and create lasting change in communities across Ethiopia.
         </p>
@@ -44,7 +44,7 @@ export const ProjectsCTA = () => {
 
           <Link
             href="/volunteer"
-            className="px-12 py-5 border-2 border-white/60 hover:border-white text-white font-semibold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
+            className="px-12 py-5 border border-teal-400 hover:border-white text-black font-semibold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
           >
             Become a Volunteer
           </Link>
@@ -52,25 +52,25 @@ export const ProjectsCTA = () => {
 
         {/* Trust signals */}
         <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-6 text-sm text-teal-200/70">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center text-black gap-2">
             <span className="text-teal-400">✓</span>
             100% Transparent
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex text-black items-center gap-2">
             <span className="text-teal-400">✓</span>
             Tax Deductible
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex text-black items-center gap-2">
             <span className="text-teal-400">✓</span>
             Direct Impact
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex text-black items-center gap-2">
             <span className="text-teal-400">✓</span>
             Monitored Projects
           </div>
         </div>
 
-        <p className="mt-10 text-teal-200/60 text-sm">
+        <p className="mt-10 text-black text-sm">
           Together, we can give hope, dignity, and a brighter future to those
           who need it most.
         </p>
