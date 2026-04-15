@@ -5,12 +5,13 @@ import { Projects } from "@/features/Home/components/Projects";
 import { Partners } from "@/features/Home/components/Partners";
 import { CallToAction } from "@/features/Home/components/CallToAction";
 import { Achievements } from "@/features/Home/components/Achievements";
+import { Hero } from "@/features/Home/components/Hero";
 
 export default function HomePage() {
   return (
     <>
       <main>
-        <HeroSlider />
+        <Hero />
         <ImpactStats />
         <CoreServices />
         <Partners />
