@@ -17,12 +17,12 @@ export const ProjectsCTA = () => {
           </span>
         </div>
 
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-teal-800 via-indigo-800 to-amber-800 bg-clip-text text-transparent leading-tight tracking-tight mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-teal-800 via-indigo-800 to-amber-800 bg-clip-text text-transparent leading-tight tracking-tight mb-8">
           Every Gift Builds
           <br />a Better Tomorrow
         </h2>
 
-        <p className="text-md md:text-xl text-black max-w-3xl mx-auto leading-light mb-12">
+        <p className="text-sm md:text-lg text-black max-w-3xl mx-auto leading-light mb-12">
           Your support helps us build more safe homes for elders, feed orphaned
           children, and create lasting change in communities across Ethiopia.
         </p>
@@ -35,7 +35,7 @@ export const ProjectsCTA = () => {
           >
             <span className="relative z-10 flex items-center gap-3">
               Donate Now
-              <span className="text-2xl transition-transform group-hover:rotate-12">
+              <span className="text-xl transition-transform group-hover:rotate-12">
                 ❤️
               </span>
             </span>

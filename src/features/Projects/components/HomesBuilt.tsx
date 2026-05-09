@@ -1,14 +1,16 @@
-import Image from "next/image";
-import { Home } from "lucide-react";
+"use client";
 
+import React from "react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+
+// Image Imports
 import home1 from "../../../../public/assets/homesbuilt/home1.png";
 import home2 from "../../../../public/assets/homesbuilt/home2.png";
 import home3 from "../../../../public/assets/homesbuilt/home3.png";
 import home4 from "../../../../public/assets/homesbuilt/home4.png";
 import home5 from "../../../../public/assets/homesbuilt/home5.png";
 import home6 from "../../../../public/assets/homesbuilt/home6.png";
-import home7 from "../../../../public/assets/homesbuilt/home7.png";
-import home8 from "../../../../public/assets/homesbuilt/home8.png";
 
 const homeProjects = [
   {
@@ -17,7 +19,7 @@ const homeProjects = [
     description:
       "Constructed a fully furnished two-room house with kitchen and sanitation facility for an elderly widow.",
     image: home1,
-    date: "March 2025",
+    date: "MARCH 2025",
     impact: "1 Family • Dignified Living",
   },
   {
@@ -26,7 +28,7 @@ const homeProjects = [
     description:
       "Roof repair, painting, and clean water access provided to 12 vulnerable elderly households.",
     image: home2,
-    date: "February 2025",
+    date: "FEB 2025",
     impact: "12 Households",
   },
   {
@@ -35,7 +37,7 @@ const homeProjects = [
     description:
       "Built emergency shelter with solar lighting for families who lost their homes.",
     image: home3,
-    date: "January 2025",
+    date: "JAN 2025",
     impact: "3 Families",
   },
   {
@@ -44,7 +46,7 @@ const homeProjects = [
     description:
       "Constructed a fully furnished two-room house with kitchen and sanitation facility for an elderly widow.",
     image: home4,
-    date: "March 2025",
+    date: "MARCH 2025",
     impact: "1 Family • Dignified Living",
   },
   {
@@ -53,7 +55,7 @@ const homeProjects = [
     description:
       "Roof repair, painting, and clean water access provided to 12 vulnerable elderly households.",
     image: home5,
-    date: "February 2025",
+    date: "FEB 2025",
     impact: "12 Households",
   },
   {
@@ -62,68 +64,81 @@ const homeProjects = [
     description:
       "Built emergency shelter with solar lighting for families who lost their homes.",
     image: home6,
-    date: "January 2025",
+    date: "JAN 2025",
     impact: "3 Families",
   },
 ];
 
 export const HomesBuilt = () => {
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-        {/* Section Header */}
-        <div className="flex items-center gap-4 mb-16">
-          {/*<div className="w-14 h-14 bg-gradient-to-br from-teal-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
-            <Home className="w-8 h-8 text-white" />
-          </div>*/}
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
-              Homes Built & Renovated
-            </h2>
-            <p className="text-gray-600 mt-3 text-lg">
-              Providing dignity through safe and comfortable shelter
-            </p>
+    <section className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Minimalist Section Header */}
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-[1.5px] bg-teal-500" />
+            <span className="text-[11px] font-bold tracking-[0.3em] text-teal-600 uppercase">
+              Housing Initiatives
+            </span>
           </div>
+          <h2 className="text-3xl font-semibold md:text-4xl font-light text-slate-900 tracking-tight leading-tight">
+            Building Hope,{" "}
+            <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">
+              One Home
+            </span>{" "}
+            at a Time.
+          </h2>
+          <p className="text-slate-500 mt-4 text-[13.5px] max-w-lg leading-relaxed font-medium">
+            Our mission is to provide more than just shelter—we provide
+            security, dignity, and a foundation for a better future.
+          </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        {/* Professional Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {homeProjects.map((project) => (
-            <div
-              key={project.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100"
-            >
-              {/* Image Container */}
-              <div className="relative h-64 overflow-hidden">
+            <div key={project.id} className="group cursor-pointer">
+              {/* Minimized Image Container with Custom Aspect Ratio */}
+              <div className="relative aspect-[16/11] overflow-hidden rounded-xl mb-6 shadow-sm border border-slate-100">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-
-                {/* Date Badge */}
-                <div className="absolute top-5 right-5 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-2xl text-xs font-medium text-gray-700 shadow-sm">
-                  {project.date}
+                {/* Minimalist Date Badge Overlay */}
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-slate-100">
+                    <p className="text-[9px] font-bold text-slate-800 tracking-widest">
+                      {project.date}
+                    </p>
+                  </div>
                 </div>
+
+                {/* Subtle Gradient for depth */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent" />
               </div>
 
-              {/* Content */}
-              <div className="p-7 pb-8">
-                <h3 className="font-semibold text-xl leading-tight text-gray-900 mb-4 line-clamp-2 group-hover:text-teal-700 transition-colors">
-                  {project.title}
-                </h3>
+              {/* Content Area */}
+              <div className="flex flex-col">
+                <div className="flex justify-between items-start gap-4 mb-3">
+                  <h3 className="font-bold text-[15px] text-slate-900 leading-snug group-hover:text-teal-600 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <div className="p-1.5 rounded-full bg-slate-50 group-hover:bg-teal-50 transition-colors">
+                    <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-teal-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                </div>
 
-                <p className="text-gray-600 text-[15.2px] leading-relaxed mb-6 line-clamp-3">
+                <p className="text-slate-500 text-[12.5px] leading-relaxed mb-5 font-medium line-clamp-2">
                   {project.description}
                 </p>
 
-                <div className="pt-4 border-t border-gray-100">
-                  <span className="inline-block px-5 py-2 bg-teal-50 text-teal-700 text-sm font-medium rounded-2xl">
+                {/* Impact Badge */}
+                <div className="flex items-center">
+                  <span className="text-[9px] font-black uppercase tracking-[0.15em] text-teal-600 bg-teal-50/70 px-3 py-1.5 rounded-md border border-teal-100/50">
                     {project.impact}
                   </span>
                 </div>

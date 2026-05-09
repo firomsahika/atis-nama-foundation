@@ -1,6 +1,8 @@
 import React from "react";
 import { GalleryGrid } from "@/features/Gallery/components/GalleryGrid";
 import { GalleryHeader } from "@/features/Gallery/components/GalleryHeader";
+import SlidingGallery from "@/features/Gallery/components/SlidingGallery";
+import { GalleryHero } from "@/features/Gallery/components/GalleryHero";
 
 const page = () => {
   return (
@@ -12,6 +14,8 @@ const page = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <GalleryHero />
+        <SlidingGallery />
         <GalleryHeader />
         <GalleryGrid />
       </div>
@@ -19,4 +23,4 @@ const page = () => {
   );
 };
 
-export default page;  
+export default page;
