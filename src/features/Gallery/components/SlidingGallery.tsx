@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-// Image Imports
+// Image Imports (Keeping your existing imports)
 import a from "../../../../public/assets/a.png";
 import b from "../../../../public/assets/b.png";
 import c from "../../../../public/assets/c.png";
@@ -22,13 +22,11 @@ import achievement6 from "../../../../public/assets/achievement6.png";
 import achievement7 from "../../../../public/assets/achievement7.png";
 import achievement8 from "../../../../public/assets/achievement8.png";
 
-// Define the type for the component props
 interface ScrollImageProps {
   images: any[];
   direction?: "left" | "right";
 }
 
-// Organizing the imported images into two rows
 const row1 = [
   a,
   achievement1,
@@ -51,29 +49,45 @@ const row2 = [
 ];
 
 const ScrollImage = ({ images, direction = "left" }: ScrollImageProps) => (
-  <div className="flex overflow-hidden gap-5 py-3">
+  <div
+    className="flex overflow-hidden gap-5 py-3 relative w-full"
+    /* This creates the professional fade effect on the edges */
+    style={{
+      maskImage:
+        "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+      WebkitMaskImage:
+        "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+    }}
+  >
     <motion.div
-      animate={{ x: direction === "left" ? [0, -1500] : [-1500, 0] }}
-      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+      animate={{
+        x: direction === "left" ? [0, -1920] : [-1920, 0],
+      }}
+      transition={{
+        duration: 50,
+        repeat: Infinity,
+        ease: "linear",
+      }}
       className="flex gap-5 min-w-max"
     >
-      {[...images, ...images].map((img, i) => (
+      {/* Triple the images for a truly seamless loop on larger screens */}
+      {[...images, ...images, ...images].map((img, i) => (
         <div
           key={i}
-          className={`relative group overflow-hidden rounded-2xl shadow-md border border-white/5 flex-shrink-0
-            ${i % 3 === 0 ? "w-60 h-60" : "w-60 h-60"}
-          `}
+          className="relative group overflow-hidden rounded-2xl shadow-lg border border-gray-100/10 flex-shrink-0 w-64 h-64 md:w-50 md:h-50"
         >
           <Image
             src={img}
             alt={`gallery-image-${i}`}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-700"
+            className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
           />
 
-          {/* Your original design overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition" />
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-teal-500/10 via-indigo-500/10 to-transparent transition" />
+          {/* Premium Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
+
+          {/* Subtle Shine effect on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-white/10 via-transparent to-transparent transition-opacity duration-500" />
         </div>
       ))}
     </motion.div>
@@ -82,17 +96,26 @@ const ScrollImage = ({ images, direction = "left" }: ScrollImageProps) => (
 
 export default function SlidingGallery() {
   return (
-    <section className=" py-12 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 mb-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-indigo-800 via-teal-800 to-amber-800 bg-clip-text text-transparent leading-tight">
-          Our Gallery
-        </h2>
-        <div className="h-1 w-20 bg-teal-500 rounded-full" />
+    <section className="py-16 md:py-24 overflow-hidden ">
+      <div className="max-w-7xl mx-auto px-6 mb-12">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4">
+            Our <span className="text-cyan-600">Gallery</span>
+          </h2>
+          <div className="h-1.5 w-24 bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-full" />
+        </div>
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <ScrollImage images={row1} direction="left" />
         <ScrollImage images={row2} direction="right" />
+      </div>
+
+      {/* Bottom decorative text/cta */}
+      <div className="mt-12 text-center">
+        <p className="text-gray-400 text-sm font-medium tracking-[0.2em] uppercase">
+          Capturing Moments of Hope
+        </p>
       </div>
     </section>
   );

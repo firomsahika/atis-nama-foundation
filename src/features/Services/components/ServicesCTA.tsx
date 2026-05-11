@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Heart } from "lucide-react";
+import Link from "next/link";
 
 export const ServicesCTA = () => {
   return (
@@ -35,18 +36,22 @@ export const ServicesCTA = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Primary Button */}
-          <button className="group px-8 py-3 rounded-xl bg-white text-indigo-700 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2">
-            Donate Now
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </button>
+          <Link href="/donate">
+            <button className="group px-8 py-3 rounded-xl bg-white text-indigo-700 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2">
+              Donate Now
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </button>
+          </Link>
 
           {/* Secondary Button */}
-          <button className="px-8 py-3 rounded-xl border border-white/40 text-white font-medium backdrop-blur-md hover:bg-white/10 transition-all duration-300">
-            Become a Volunteer
-          </button>
+          <Link href="/contact">
+            <button className="px-8 py-3 rounded-xl border border-white/40 text-white font-medium backdrop-blur-md hover:bg-white/10 transition-all duration-300">
+              Become a Volunteer
+            </button>
+          </Link>
         </div>
       </div>
     </section>

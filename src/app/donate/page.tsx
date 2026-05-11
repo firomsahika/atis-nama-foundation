@@ -2,6 +2,7 @@ import { DonateHeader } from "@/features/Donate/components/DonateHeader";
 import { DonateOptions } from "@/features/Donate/components/DonateOptions";
 import { DonateForm } from "@/features/Donate/components/DonateForm";
 import { DonateImpact } from "@/features/Donate/components/DonateImpact";
+import { DonationAccounts } from "@/features/Donate/components/DonationAccount";
 
 const page = () => {
   return (
@@ -14,12 +15,13 @@ const page = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <DonateHeader />
+        <DonationAccounts />
 
-        <DonateOptions />
+        {/*<DonateOptions />*/}
 
-        <div className="mt-12 max-w-2xl mx-auto">
+        {/*<div className="mt-12 max-w-2xl mx-auto">
           <DonateForm />
-        </div>
+        </div>*/}
 
         <DonateImpact />
       </div>

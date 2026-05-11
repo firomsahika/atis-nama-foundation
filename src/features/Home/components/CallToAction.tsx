@@ -23,7 +23,7 @@ export const CallToAction = () => {
         <div className="flex flex-wrap justify-center gap-6">
           {/* Services CTA */}
           <a
-            href="/services"
+            href="/projects"
             className="px-12 py-5 bg-white text-[#1e4356] font-bold text-[11px] tracking-[0.3em] uppercase rounded-sm
         hover:bg-blue-50 transition-all shadow-xl active:scale-95"
           >
@@ -32,7 +32,7 @@ export const CallToAction = () => {
 
           {/* Contact CTA */}
           <a
-            href="/verify"
+            href="/donate"
             className="px-12 py-5 border border-white/50 text-white font-bold text-[11px] tracking-[0.3em] uppercase rounded-sm
         hover:bg-white/10 transition-all active:scale-95"
           >
