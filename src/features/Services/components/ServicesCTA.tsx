@@ -23,8 +23,8 @@ export const ServicesCTA = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-          Be the Reason Someone Smiles Today
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-extrabold leading-tight mb-6">
+          Be the Reason Someone <br></br>Smiles Today
         </h2>
 
         {/* Description */}
