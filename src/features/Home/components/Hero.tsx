@@ -28,7 +28,7 @@ export const Hero = () => {
         {images.map((img, index) => (
           <Image
             key={index}
-            src={img}
+            src={achievement8}
             alt="Hero background"
             fill
             priority={index === 0}
@@ -41,8 +41,8 @@ export const Hero = () => {
         ))}
 
         {/* overlays */}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07111d]/70 via-[#07111d]/40 to-[#07111d]" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#07111d]/90 via-[#07111d]/40 to-[#07111d]" />
 
         {/* subtle grid */}
         <div className="absolute inset-0 opacity-[0.05]">
@@ -64,10 +64,10 @@ export const Hero = () => {
             </div>
 
             {/* heading */}
-            <h1 className="mt-6 text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-5xl">
-              A Home Of <br className="hidden lg:hidden sm:block" /> Compassion
+            <h1 className="mt-6 text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-4xl">
+              A Home Of Compassion
               <br />
-              <span className="bg-gradient-to-r from-cyan-300 via-teal-200 to-indigo-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r font-bolder from-cyan-300 via-teal-200 to-indigo-300 bg-clip-text text-transparent">
                 ATIS NAMA Foundation
               </span>
             </h1>
@@ -75,7 +75,7 @@ export const Hero = () => {
             {/* text */}
             <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/75 sm:text-lg">
               ATIS NAMA provides shelter, dignity, care, and emotional support
-              for elders and children in need — creating a safe community where
+              for elders and children in need creating a safe community where
               every life matters and every story finds hope again.
             </p>
 
@@ -106,7 +106,7 @@ export const Hero = () => {
             <div className="mt-12 grid w-full max-w-md grid-cols-2 gap-3 sm:grid-cols-3 md:mt-14 md:gap-4 lg:max-w-xl">
               {[
                 { number: "500+", label: "Lives Helped" },
-                { number: "12+", label: "Programs" },
+               
                 { number: "8+", label: "Years" },
               ].map((item, index) => (
                 <div

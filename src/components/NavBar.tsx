@@ -52,7 +52,7 @@ export const NavBar = () => {
           }
         `}
       >
-        <div className="mx-auto flex h-[60px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-[50px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
           {/* ================= LOGO ================= */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-cyan-500 via-teal-500 to-indigo-600 shadow-md group-hover:scale-105 transition-transform">

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google"; // 1. Import Poppins
+import {Montserrat} from "next/font/google"
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 // 2. Initialize the font
-const poppins = Poppins({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
@@ -32,8 +33,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        // 3. Apply poppins.className here
-        className={`${poppins.className} bg-background text-on-background min-h-screen flex flex-col antialiased`}
+        // 3. Apply montserrat.className here
+        className={`${montserrat.className} bg-background text-on-background min-h-screen flex flex-col antialiased`}
         suppressHydrationWarning={true}
       >
         <NavBar />
